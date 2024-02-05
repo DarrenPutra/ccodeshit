@@ -17,5 +17,5 @@ class Student(Person):
 
 p1 = Student("Jack","Sparrow", "BBS")
 p1.getdata()
-p2 = Person("gay","Fat")
+p2 = Person("Samad","Fat")
 p2.getdata()
