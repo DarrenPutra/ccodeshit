@@ -1,0 +1,20 @@
+CLASS Person
+    PROTECTED Fname : STRING
+    PROTECTED Lname : STRING
+
+    PROCEDURE NEW(First:STRING,Last:STRING)
+        Fname<-- First
+        Lname<-- Last
+    ENDPROCEDURE
+
+    PROCEDURE ShowDetails()
+        OUTPUT Fname
+        OUTPUT Lname
+    ENDPROCEDURE
+ENDCLASS
+
+CLASS Student INHERITS Person 
+    PRIVATE StudentID :STRING 
+    
+
+

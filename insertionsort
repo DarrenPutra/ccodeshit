@@ -1,0 +1,15 @@
+arr <-- [9, 4, 5, 6, 5, 7, 4, 3]
+DECLARE i, Value, j , k: INTEGER
+FOR i <-- 1 TO LENGTH(arr)-1
+    Value <-- arr[i]
+    j <-- i-1
+    WHILE j > -1 AND  arr[j] > Value        
+        arr [i] <-- arr[j]
+        arr [j] <-- Value
+        j <-- j-1
+    ENDWHILE
+ENDFOR
+
+FOR i <-- 0 TO LENGTH(arr)
+    OUTPUT arr[i]
+NEXT i 

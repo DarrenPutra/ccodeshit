@@ -1,0 +1,11 @@
+TYPE Node
+    DECLARE Lpointer: INTEGER
+    DECLARE Data : INTEGER
+    DECLARE Rpointer: INTEGER
+ENDTYPE
+
+DECLARE Tree : ARRAY[1...10] OF Node
+DECLARE Root : INTEGER
+DECLARE Itempointer : INTEGER
+Root = -1
+PROCEDURE Insert(Tree: ARRAY[1...10] OF Node, Itempointer : INTEGER, )

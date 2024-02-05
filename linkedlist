@@ -1,0 +1,16 @@
+DECLARE Datalist    : ARRAY OF INTEGER
+DECLARE PointerList : ARRAY OF INTEGER
+DECLARE StartPointer, HeapPointer: INTEGER
+StartPointer <- -1
+HeapPointer <- 0
+PointerList[(LENGTH(PointerList)-1)] <- -1
+FOR Index <- 0 TO LENGTH(Pointerlist)-2
+
+
+FUNCTION IsEmpty RETURNS BOOLEAN
+    IF StartPointer = -1 THEN
+        RETURN TRUE
+    ELSE
+        RETURN FALSE
+    ENDIF
+ENDFUNCTION

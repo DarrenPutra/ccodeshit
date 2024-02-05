@@ -1,0 +1,12 @@
+arr <-- [9, 4, 5, 6, 5, 7, 4, 3]
+DECLARE Temp, i , Pass : INTEGER
+
+FOR Pass <-- 0 TO LENGTH(arr)-1
+    FOR I <-- 0 To LENGTH(arr)-1
+        IF (arr[i] > arr [i+1]) AND (arr[i] < LENGTH(arr)-1) THEN
+            Temp <-- arr[i+1]
+            arr[i+1] <-- arr[i]
+            arr [i] <-- Temp
+    NEXT i
+NEXT Pass
+
