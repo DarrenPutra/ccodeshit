@@ -1,0 +1,33 @@
+CLASS Salary
+    DECLARE MonthlyPay : REAL
+    
+    PUBLIC PROCEDURE NEW (Pay: REAL)
+        MonthlyPay<- Pay
+    ENDPROCEDURE
+
+    PUBLIC FUNCTIJON YearlyPay() RETURNS REAL
+        RETURN MonthlyPay *12
+    ENDFUNCTION
+ENDCLASS
+
+//Sal<-NEW Salary(100)
+//OUTPUT Sal.YearlyPay()
+
+CLASS Employee
+    DECLARE EmpName : STRING
+    DECLARE EmpBonus : REAL
+    DECLARE EmpSalary : Salary
+
+    PUBLIC PROCEDURE NEW(name: STRING,sal:REAL,bonus;REAL)
+        EmpName <- name
+        EmpBonus <- bonus
+        EmpSalary <- NEW Salary(sal)
+    ENDPROCEDURE
+    
+    PUBLIC FUNCTION TotalSalary() RETURNS REAL
+        RETURN EmpSalary.YearlyPay() *12 + EmpBonus
+    ENDFUNCTION
+ENDCLASS
+
+emp1 <- NEW Employee("Khan",100,300)
+OUTPUT emp1.TotalSalary
